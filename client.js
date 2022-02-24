@@ -19,7 +19,6 @@ const connect = function () {
  
   conn.on("data", (data) => {
     // code that does something when the connection is first established
-    conn.write('Move: up');
     console.log("you ded cuz you idled");
   });
   return conn;
