@@ -19,11 +19,11 @@ const connect = function () {
  
   conn.on("data", (data) => {
     // code that does something when the connection is first established
-    console.log("you ded cuz you idled");
+    console.log('Server says: ', data);
   });
+  
   return conn;
 };
-
-
+  
 module.exports = { connect };
 
