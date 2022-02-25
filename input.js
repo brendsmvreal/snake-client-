@@ -1,32 +1,29 @@
+const { MOVE_UP_KEY, MOVE_LEFT_KEY, MOVE_DOWN_KEY, MOVE_RIGHT_KEY, MESSAGES } = require("./constant");
+
 let connection;
 
 const handleUserInput = function (key) {
   if (key === '\u0003') {
     process.exit();
   }
-  if (key === 'W') {
+  if (key === MOVE_UP_KEY) {
     connection.write('Move: up');
   }
-  if (key === 'A') {
+  if (key === MOVE_LEFT_KEY) {
     connection.write('Move: left');
   }
-  if (key === 'S') {
+  if (key === MOVE_DOWN_KEY) {
     connection.write('Move: down');
   }
-  if (key === 'D') {
+  if (key === MOVE_RIGHT_KEY) {
     connection.write('Move: right');  
   }
-  if (message[key]) {
-    connection.write(message[key])
+  if (MESSAGES[key]) {
+    connection.write(MESSAGES[key])
   };
 };
-const message = {
-  '1': "Say: Faster",
-  '2': "Say: GO GO GO",
-  '3': "Say: Yummy!"
-};
 
-const setupInput = function (conn) {
+const setupInput = function(conn) {
   connection = conn;
   const stdin = process.stdin;
   stdin.setRawMode(true);
