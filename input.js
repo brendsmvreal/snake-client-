@@ -2,7 +2,7 @@ const { MOVE_UP_KEY, MOVE_LEFT_KEY, MOVE_DOWN_KEY, MOVE_RIGHT_KEY, MESSAGES } = 
 
 let connection;
 
-const handleUserInput = function (key) {
+const handleUserInput = function(key) {
   if (key === '\u0003') {
     process.exit();
   }
@@ -16,11 +16,11 @@ const handleUserInput = function (key) {
     connection.write('Move: down');
   }
   if (key === MOVE_RIGHT_KEY) {
-    connection.write('Move: right');  
+    connection.write('Move: right');
   }
   if (MESSAGES[key]) {
-    connection.write(MESSAGES[key])
-  };
+    connection.write(MESSAGES[key]);
+  }
 };
 
 const setupInput = function(conn) {
@@ -28,7 +28,7 @@ const setupInput = function(conn) {
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
-  stdin.on("data", handleUserInput); 
+  stdin.on("data", handleUserInput);
   stdin.resume();
   return stdin;
 };
