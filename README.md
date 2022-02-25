@@ -8,6 +8,7 @@ Before you can run this client, you will need to be running the server side whic
 
 ## Final Product
 
+[Pic of snake game]<img width="809" alt="Screen Shot 2022-02-25 at 9 22 23 AM" src="https://user-images.githubusercontent.com/86802835/155731753-46b9af70-46bc-4b66-b9a9-6666b35007ce.png">
 
 
 ## Getting Started
